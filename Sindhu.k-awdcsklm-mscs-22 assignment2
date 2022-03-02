@@ -1,0 +1,30 @@
+a=[]
+m=int (input ('enter no:'))
+n=int (input ('enter no :'))
+for i in range (m):
+    row=[]
+    for i in range (n):
+        k=int (input ('enter :'))
+        row.append (k)
+    a.append (row)
+print (a)
+b=[]
+m=int (input ('enter no:'))
+n=int (input ('enter no :'))
+for i in range (m):
+    row=[]
+    for i in range (n):
+        k=int (input ('enter :'))
+        row.append (k)
+    b.append (row)
+print (b)
+result=[]
+result = [[0,0,0],
+         [0,0,0]]
+for i in range(len(a)):
+   for j in range(len(b[0])):
+       for k in range(len(b)):
+           result[i][j]+= a[i][k] * b[k][j]
+print ('resultant matrix is :')
+for r in result:
+    print (r)
